@@ -1,7 +1,7 @@
+var fs = require('fs');
+
 module.exports = function (dir, ext, callback) {
-	var fs = require('fs');
-    var regex = new RegExp('\\.'+process.argv[3]+'$', 'm');
-    ext = '.' + ext;
+    var regex = new RegExp('\\.' + ext + '$', 'm');
     
 	var results = [];
     fs.readdir(dir, function (err, list){
